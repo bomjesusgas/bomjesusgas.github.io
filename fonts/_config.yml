@@ -1,0 +1,34 @@
+# Configuração do Jekyll para GitHub Pages
+title: "Bom Jesus Gás - Mantendo a Chama da Sua Casa Acesa"
+description: "Entrega de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preços justos e instalação incluída."
+url: "https://bomjesusgas.github.io"
+baseurl: ""
+
+# Configurações do Jekyll
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Incluir arquivos específicos
+include:
+  - sitemap.xml
+  - robots.txt
+
+# Excluir arquivos desnecessários
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# SEO
+lang: pt-BR
+author: "Bom Jesus Gás"
+
+# Configurações adicionais
+timezone: America/Sao_Paulo
+encoding: utf-8
