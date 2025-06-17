@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bom Jesus Gás - Entrega de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preços justos e instalação incluída.">
+  <meta name="keywords" content="botijão de gás, entrega de gás Jaboticabal, distribuidora de gás perto de mim, depósito de gás em Jaboticabal, distribuidora de gás em Jaboticabal">
+  <meta name="author" content="Bom Jesus Gás">
+  <meta name="robots" content="index, follow">
+  <title>Bom Jesus Gás - Mantendo a Chama da Sua Casa Acesa</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZMRWK5Q');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('fonts/Poppins-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+ 
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: #000000;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #F26522, #269892);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #F26522;
+      transform: translateY(-2px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #F26522;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #269892 0%, #F26522 50%, #000000 100%);
+      color: white;
+      padding: 80px 0 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+      animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-emoji {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1s ease 0.1s both;
+      line-height: 1.2;
+    }
+
+    .hero-copy {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      line-height: 1.8;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .hero-copy strong {
+      color: #FAF9F5;
+      font-weight: bold;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: light;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .cta-primary {
+      background: #25d366;
+      color: white;
+      font-size: 1.1rem;
+      padding: 8px 20px;
+    }
+
+    .cta-secondary {
+      background: #34b7f1;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .payment-info {
+      margin-top: 2rem;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1s ease 0.5s both;
+    }
+
+    .payment-info h4 {
+      color: #Fff;
+      margin-bottom: 10px;
+    }
+
+    .schedule-item {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #269892;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(38, 152, 146, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid #269892;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(38, 152, 146, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .service-card:hover::before {
+      left: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(38, 152, 146, 0.15);
+    }
+
+    .service-icon {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(45deg, #269892, #F26522);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #269892;
+    }
+
+    /* About Section */
+    .about {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #269892 0%, #F26522 100%);
+      color: white;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 100px 0;
+      background: #151618;
+      color: white;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .contact-item {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #F26522;
+    }
+
+    .schedule-item {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    } 
+  
+    /* Footer */
+    footer {
+      background: #000000;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background: #000000;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      /* Hero Section Responsive */
+      .hero {
+        padding: 100px 0 50px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem; /* Reduzido de 2rem */
+      }
+
+      .hero-copy {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-buttons {
+        flex-direction: row;
+        gap: 0.5rem;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        min-width: 180px;
+        max-width: 200px;
+      }
+
+      .cta-primary {
+        font-size: 1.1rem;
+        padding: 8px 20px; /* Reduzido o padding vertical */
+        height: 45px;
+        line-height: 1.2;
+      }
+
+      .cta-secondary {
+        font-size: 0.9rem;
+      }
+
+      .payment-info {
+        padding: 15px;
+        margin-top: 1rem;
+      }
+
+      .payment-info h4 {
+        font-size: 1rem;
+      }
+
+      .payment-info p {
+        font-size: 0.9rem;
+      }
+
+      .schedule-item {
+        font-size: 0.85rem;
+      }
+
+      /* Services Section Responsive */
+      .services {
+        padding: 50px 0;
+      }
+
+      .services h2 {
+        font-size: 1.8rem;
+      }
+
+      .services-grid {
+        gap: 1rem;
+      }
+
+      .service-card {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+      }
+ 
+      .service-icon {
+        margin-bottom: 0.3rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .service-card p {
+        font-size: 0.9rem;
+      }
+
+      /* About Section Responsive */
+      .about {
+        padding: 50px 0;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .about h2 {
+        font-size: 1.8rem;
+      }
+
+      .about p {
+        font-size: 0.9rem;
+      }
+
+      /* Contact Section Responsive */
+      .contact {
+        padding: 50px 0;
+        background: #151618;
+      }
+
+      .contact h2 {
+        font-size: 1.8rem;
+      }
+
+      .contact-grid {
+        gap: 1rem;
+      }
+
+      .contact-item {
+        padding: 1rem;
+      }
+
+      .contact-item h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-item p {
+        font-size: 0.9rem;
+      }
+
+      .contact-icon {
+        font-size: 2rem;
+      }
+
+      /* Floating WhatsApp Button Responsive */
+      .whatsapp-float {
+        right: 5px; /* Aproximado da borda direita */
+      }
+    
+      .stat-number {
+        color: #Fff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZMRWK5Q"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <div class="logo">🔥 Bom Jesus Gás</div>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>🔥Não vendemos apenas o Gás<br>Garantimos que a chama da sua casa continue acesa.</h1>
+        <div class="hero-copy">
+          <p>Vendemos aquele cheiro de café fresco passando pela casa numa manhã fria, junto com aquele bolo que a avó faz, que só ela sabe, o almoço de domingo, com o feijão borbulhando na panela, o arroz soltinho e a carne no ponto.</p>
+          <p><strong>O Gás é o que mantém o seu lar em funcionamento.</strong> É o que garante que a casa continue com cheiro de comida boa.</p>
+          
+          <strong>Clique abaixo e faça seu pedido</strong>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me/5516997234641" class="cta-button cta-primary">💬 Pedir pelo WhatsApp</a>
+          <a href="tel:+551632129111" class="cta-button cta-secondary">📞 Ligar no Fixo</a>
+        </div>
+
+        <div class="payment-info">
+          <h4>💳 Formas de Pagamento</h4>
+          <p>PIX • Cartão • Dinheiro</p>
+          <h4>🕐 Horários de Atendimento</h4>
+          <div class="schedule-item">Segunda, Terça e Quarta: 07:10 às 21:45</div>
+          <div class="schedule-item">Quinta, Sexta, Sábado e Domingo: 07:30 às 21:45</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠🏢</div>
+          <h3>Entrega de Gás</h3>
+          <p>Botijões de Gás P13 para residências e comércios, e não se preocupe, instalamos pra você.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>Atendimento Premium</h3>
+          <p>Nosso WhatsApp é campeão de atendimento, resposta rápida e cordial, produto de alta qualidade e com preço justo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💰</div>
+          <h3>Descontos Especiais</h3>
+          <p>Clientes recorrentes têm descontos especiais. Quanto mais você compra, mais você economiza!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div>
+          <h2>Sobre a Bom Jesus Gás</h2>
+          <p>Há 5 anos no mercado somos referência em qualidade e rapidez, tanto na entrega quanto no atendimento, são mais de 30 entregas por dia, e centenas ao longo desses anos, estamos aqui para garantir que a chama da sua casa continue acesa, comida quentinha e café na mesa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📞📍</div>
+          <h3>Contato e Endereço</h3>
+          <p><strong>Telefones:</strong><br>WhatsApp: (16) 99723-4641<br>Fixo: (16) 3212-9111</p>
+          <p><strong>Endereço:</strong><br>Rua Vicente Tofani, 147, Jardim Bom Jesus, Jaboticabal - SP, CEP: 14876-132</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Bom Jesus Gás. Todos os direitos reservados. | Mantendo a chama da sua casa sempre acesa ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5516997234641" class="whatsapp-float" target="_blank" aria-label="Abrir conversa no WhatsApp" title="Abrir conversa no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false">
+      <title>WhatsApp</title>
+      <desc>Ícone do WhatsApp</desc>
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 1.87.51 3.63 1.41 5.15L2 22l4.85-1.41C8.37 21.49 10.13 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.27-.45-4.67-1.3l-.34-.2-2.88.84.84-2.88-.2-.34C3.9 15.27 3.45 13.66 3.45 12c0-4.69 3.81-8.5 8.5-8.5s8.5 3.81 8.5 8.5-3.81 8.5-8.5 8.5zm4.24-5.74c-.26-.13-1.54-.77-1.78-.86-.24-.09-.42-.13-.6.13-.18.26-.69.86-.84 1.04-.15.18-.31.2-.57.07-.26-.13-1.1-.48-2.1-1.54-.78-.82-1.3-1.83-1.45-2.09-.15-.26-.02-.4.11-.53.12-.11.26-.29.39-.43.13-.15.18-.26.26-.43.09-.18.04-.34-.02-.48-.07-.15-.62-1.49-.86-2.04-.24-.55-.48-.46-.66-.47-.17-.01-.37-.01-.57-.01-.2 0-.53.07-.72.34-.19.26-.72.86-.72 2.1 0 1.24.74 2.44 1.07 3.28.33.84 1.47 2.56 3.56 3.59.5.25 1.02.47 1.54.62.51.15.96.18 1.32.11.4-.08 1.24-.5 1.41-.99.18-.49.18-.91.13-1.01-.05-.1-.24-.16-.50-.29z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    // Header background on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
+      } else {
+        header.style.background = '#000000';
+      }
+    });
+    // Animate elements on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    });
+    document.querySelectorAll('.service-card, .contact-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+    // Add click tracking for buttons (opcional - para analytics)
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('click', function() {
+        console.log('Botão clicado:', this.textContent.trim());
+      });
+    });
+  </script>
+</body>
+
+</html>
