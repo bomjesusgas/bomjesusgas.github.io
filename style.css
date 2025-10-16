@@ -1,9 +1,3 @@
-/*
- * CORREÇÃO CRÍTICA:
- * O format() deve corresponder ao formato do arquivo.
- * WOFF2 usa format('woff2'). Adicionado TTF como fallback (opcional, mas recomendado).
- */
-
 /* Poppins Regular (Peso 400) */
 @font-face {
     font-family: 'Poppins';
@@ -205,14 +199,14 @@ nav {
 
 .cta-primary { 
     background: #25d366; /* Cor do WhatsApp */
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.1rem;
     padding: 8px 20px;
 }
 
 .cta-secondary {
     background: #34b7f1; /* Cor para o botão de telefone/ligar */
-    color: white;
+    color: rgb(0, 0, 0);
     border: 2px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
 }
