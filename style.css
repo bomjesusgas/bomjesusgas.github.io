@@ -253,7 +253,7 @@ nav {
 }
 }
 
-/* Services Section */
+/* Services Section
 .services {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -263,7 +263,7 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #269892; /* Cor principal da marca */
+    color: #269892;  Cor principal da marca
 }
 
 .services-grid {
@@ -282,9 +282,9 @@ nav {
     position: relative;
     overflow: hidden;
     border-top: 4px solid #269892;
-}
+}*/
 
-/* Efeito de hover que simula um brilho passando */
+/* Efeito de hover que simula um brilho passando *//*
 .service-card::before {
     content: '';
     position: absolute;
@@ -308,7 +308,6 @@ nav {
 .service-icon {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    /* Gradiente para os ícones */
     background: linear-gradient(45deg, #269892, #F26522);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -319,13 +318,13 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #269892;
-}
+}*/
 
 /* About Section */
 .about {
     padding: 10px 0;
     /* Fundo com as cores da marca */
-    background: linear-gradient(135deg, #269892 0%, #F26522 100%);
+    background: linear-gradient(135deg, #269892/* 0%, #F26522 100%*/);
     color: white;
 }
 
@@ -349,10 +348,10 @@ nav {
     
 }
 
-/* Contact Section */
+/* Contact Section 
 .contact {
     padding: 100px 0;
-    background: #151618; /* Cinza bem escuro para contraste */
+    background: #151618; /* Cinza bem escuro para contraste 
     color: white;
 }
 
@@ -371,7 +370,7 @@ nav {
 .contact-item {
     text-align: center;
     padding: 2rem;
-    /* Efeito de vidro escuro */
+    /* Efeito de vidro escuro 
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -386,21 +385,51 @@ nav {
 .contact-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #F26522; /* Destaque laranja */
+    color: #F26522; /* Destaque laranja 
 }
 
 .schedule-item {
     margin: 0.5rem 0;
     font-size: 0.95rem;
-} 
+} */
 
 /* Footer */
 footer {
-    background: #000000;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400; /* Regular */
+  line-height: 1.6;
+  border-top: 1px solid rgb(255, 255, 255);
 }
+
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem; /* espaçamento vertical entre linhas */
+  
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600; /* Bold */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f5b400; /* tom de destaque suave — pode trocar se quiser outra cor */
+}
+
 
 /* Floating WhatsApp Button */
 .whatsapp-float {
@@ -503,25 +532,39 @@ footer {
         font-size: 0.85rem;
     }
 
-    /* Sections Responsive */
+    /* Sections Responsive 
     .services, .about, .contact {
         padding: 50px 0;
     }
 
     .services h2, .about h2, .contact h2 {
         font-size: 1.8rem;
-    }
+    }*/
     
     .about-content {
         grid-template-columns: 1fr; /* Coluna única no mobile */
     }
+    .about h2 {
+        font-size: 1.7rem;
+    }
 
     .about p {
         font-size: 0.9rem;
+        
+    }
+    .mobile-break {
+        display: block; ;
     }
 
-    .contact-grid {
+    /*.contact-grid {
         gap: 1rem;
+    }*/
+    footer .container {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: center;
+
     }
 
     /* Floating WhatsApp Button Responsive */
