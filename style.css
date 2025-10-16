@@ -323,14 +323,14 @@ nav {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: 10px 0;
     /* Fundo com as cores da marca */
     background: linear-gradient(135deg, #269892 0%, #F26522 100%);
     color: white;
 }
 
 .about-content {
-    display: grid;
+    display: absolute;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
@@ -338,14 +338,14 @@ nav {
 
 .about h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .about p {
     font-size: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     
 }
 
