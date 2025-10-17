@@ -400,7 +400,7 @@ footer {
   font-size: 0.95rem;
   font-weight: 400; /* Regular */
   line-height: 1.6;
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 0.1px solid rgb(255, 255, 255);
 }
 
 footer .container {

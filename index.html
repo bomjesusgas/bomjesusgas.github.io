@@ -3,15 +3,15 @@
 
 <head>
     <!-- ADICIONE AQUI - CSP -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-        style-src 'self' 'unsafe-inline';
-        img-src 'self' data: https:;
-        font-src 'self' data:;
-        connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-        frame-src https://www.googletagmanager.com;
-    ">
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'sha256-T5tuTUKUeV8YQdrZH+te/SF7mC8xMKqDdWB00N+DrGs=';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data: https:;
+    font-src 'self' data: https://fonts.gstatic.com;
+    connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    frame-src https://www.googletagmanager.com;
+">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bom Jesus Gás - Entrega de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preços justos e instalação incluída.">
@@ -28,7 +28,6 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Bom Jesus Gás",
-  "image": "https://www.bomjesusgas.github.io",
   "description": "Distribuidora de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preço justo e instalação incluída.",
   "address": {
     "@type": "PostalAddress",
