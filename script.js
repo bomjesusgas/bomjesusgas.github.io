@@ -85,5 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
     */
+    // Adicionar: Rastreamento de eventos no GA
+    document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('click', function() {
+            dataLayer.push({
+                event: 'botao_clicado',
+                tipo: this.textContent.trim()
+            });
+        });
+    });
 
 });

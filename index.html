@@ -2,6 +2,16 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- ADICIONE AQUI - CSP -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        font-src 'self' data:;
+        connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+        frame-src https://www.googletagmanager.com;
+    ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bom Jesus Gás - Entrega de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preços justos e instalação incluída.">
@@ -10,7 +20,51 @@
     <meta name="robots" content="index, follow">
     <title>Bom Jesus Gás - Mantendo a Chama da Sua Casa Acesa</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🔥%3C/text%3E%3C/svg%3E">
-    
+    <title>Bom Jesus Gás - Mantendo a Chama da Sua Casa Acesa</title>
+
+<!-- ADICIONE AQUI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bom Jesus Gás",
+  "image": "https://www.bomjesusgas.github.io",
+  "description": "Distribuidora de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preço justo e instalação incluída.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Vicente Tofani, 147",
+    "addressLocality": "Jaboticabal",
+    "addressRegion": "SP",
+    "postalCode": "14876-132",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5516997234641",
+  "url": "https://www.bomjesusgas.github.io",
+  "priceRange": "R$ 100 - R$ 120",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday"],
+      "opens": "07:10",
+      "closes": "21:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:30",
+      "closes": "21:45"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+5516997234641",
+    "contactType": "Customer Service",
+    "areaServed": "BR",
+    "availableLanguage": "pt-BR"
+  },
+  ]
+}
+</script>
     <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,6 +74,7 @@
     (window,document,'script','dataLayer','GTM-WZMRWK5Q');
     
     </script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -49,7 +104,7 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5516997234641" class="cta-button cta-primary">
+                    <a href="https://wa.me/5516997234641?text=Ol%C3%A1!%20tudo%20j%C3%B3ia%2C%20Gostaria%20de%20um%20g%C3%A1s%20por%20favor%2C%20qual%20%C3%A9%20o%20valor%3F" class="cta-button cta-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black" aria-hidden="true" focusable="false" style="margin-right: 8px;">
                     <title>WhatsApp</title>
                     <desc>Ícone do WhatsApp</desc>
@@ -59,10 +114,9 @@
                 </div>
 
                 <div class="payment-info">
-                    <strong><p>💳 Formas de Pagamento: </strong><a>PIX • Cartão • Dinheiro </a>
-                    <p><strong>🕐 Horários de Atendimento: </strong><a>Segunda, Terça e Quarta: 07:10 às 21:45</a></p>
+                    <strong><p>💳 Formas de Pagamento: </strong><span>PIX • Cartão • Dinheiro </span>
+                    <p><strong>🕐 Horários de Atendimento: </strong><span>Segunda, Terça e Quarta: 07:10 às 21:45</span></p>
                     <p>Quinta, Sexta, Sábado e Domingo: 07:30 às 21:45</p>
-                    <div class="schedule-item"></div>
                     <div class="schedule-item"></div>
                 </div>
             </div>
@@ -128,7 +182,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5516997234641" class="whatsapp-float" target="_blank" aria-label="Abrir conversa no WhatsApp" title="Abrir conversa no WhatsApp">
+    <a href="https://wa.me/5516997234641?text=Ol%C3%A1!%20tudo%20j%C3%B3ia%2C%20Gostaria%20de%20um%20g%C3%A1s%20por%20favor%2C%20qual%20%C3%A9%20o%20valor%3F" class="whatsapp-float" target="_blank" aria-label="Abrir conversa no WhatsApp" title="Abrir conversa no WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false">
             <title>WhatsApp</title>
             <desc>Ícone do WhatsApp</desc>
@@ -137,7 +191,7 @@
         </a>
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    
 
 </body>
 
