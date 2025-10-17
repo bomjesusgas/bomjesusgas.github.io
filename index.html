@@ -5,13 +5,18 @@
     <!-- ADICIONE AQUI - CSP -->
 <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'sha256-T5tuTUKUeV8YQdrZH+te/SF7mC8xMKqDdWB00N+DrGs=';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval'
+        https://www.googletagmanager.com
+        https://www.google-analytics.com
+        https://www.googleadservices.com
+        https://googleads.g.doubleclick.net;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' data: https: https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.gstatic.com;
     font-src 'self' data: https://fonts.gstatic.com;
     connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.gstatic.com;
-    frame-src https://www.googletagmanager.com;
+    frame-src https://www.googletagmanager.com https://www.googleadservices.com;
 ">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bom Jesus Gás - Entrega de gás em Jaboticabal, SP. Botijões P13 com atendimento rápido, preços justos e instalação incluída.">
