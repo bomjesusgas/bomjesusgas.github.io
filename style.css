@@ -255,73 +255,6 @@ nav {
 }
 }
 
-/* Services Section
-.services {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.services h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #269892;  Cor principal da marca
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(38, 152, 146, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border-top: 4px solid #269892;
-}*/
-
-/* Efeito de hover que simula um brilho passando *//*
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(38, 152, 146, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.service-card:hover::before {
-    left: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(38, 152, 146, 0.15);
-}
-
-.service-icon {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(45deg, #269892, #F26522);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #269892;
-}*/
-
 /* About Section */
 .about {
     padding: 10px 0;
@@ -350,51 +283,6 @@ nav {
     
 }
 
-/* Contact Section 
-.contact {
-    padding: 100px 0;
-    background: #151618; /* Cinza bem escuro para contraste 
-    color: white;
-}
-
-.contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.contact-item {
-    text-align: center;
-    padding: 2rem;
-    /* Efeito de vidro escuro 
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.contact-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #F26522; /* Destaque laranja 
-}
-
-.schedule-item {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
-} */
-
 /* Footer */
 footer {
   background: #000000;
@@ -402,10 +290,11 @@ footer {
   text-align: center;
   padding: 2rem 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-weight: 400; /* Regular */
   line-height: 1.6;
   border-top: 1px solid rgba(252, 250, 250, 0.9);
+  ;
 }
 
 footer .container {
@@ -536,14 +425,6 @@ footer a:hover {
         font-size: 0.85rem;
     }
 
-    /* Sections Responsive 
-    .services, .about, .contact {
-        padding: 50px 0;
-    }
-
-    .services h2, .about h2, .contact h2 {
-        font-size: 1.8rem;
-    }*/
     
     .about-content {
         grid-template-columns: 1fr; /* Coluna única no mobile */
