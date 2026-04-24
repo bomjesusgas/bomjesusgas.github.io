@@ -1,98 +1,163 @@
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * Testimonials Carousel - Efeito Premium de Deslizamento
+ * Adaptado para William F. Betioli
+ */
 
-    // 1. Smooth Scrolling
-    // Permite rolar suavemente para as seções ao clicar nos links de navegação.
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            // Corrige o bug de rolagem se o elemento não for encontrado
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    // Começa a rolagem logo após o header fixo
-                    block: 'start'
-                });
-            }
+const testimonials = [
+    { id: 1, name: "", initials: "ML", text: "Compro deles a dois anos, sempre muito bem atendida, sempre entregando com agilidade, e instalando o gás para nós. Uma grande parceria pode-se confiar, e além de tudo preço muito justo... obg por poder contar sempre com a excelência de vocês 🙏🏻" },
+    { id: 2, name: "Jonas Roberto Tobias", initials: "JT", text: "Atendimento rápido assim como a entrega. Super recomendo 🙂" },
+    { id: 3, name: "João Tonhati", initials: "JT", text: "Chegou muito rápido. Eu estava cozinhando quando acabou o gás, chegaram pra trocar antes da panela perder a pressão." },
+    { id: 4, name: "Tállita Rodrigues", initials: "TR", text: "Sempre muito rápido e com um atendimento ótimo, não compro em outro lugar de jeito nenhum" },
+    { id: 5, name: "Edson Bacarolo", initials: "EB", text: "Ligeiro e prestativo, até a borrachinha de vedação o cara troca. Nunca tinha visto isso. Estão de parabéns 👏👏👏" },
+    { id: 6, name: "Samuel Pugliano", initials: "SP", text: "Entrega muito rápida, na minha casa chegou em menos de 10 minutos. Atendimento muito bom" },
+    { id: 7, name: "Jane Feitosa", initials: "JF", text: "Só compro gás com eles não troco 👏" },
+    { id: 8, name: "Realidade Impressionante", initials: "RI", text: "Atendimento rápido e atencioso, e o melhor pelo whatsapp, agora não fico mais sem gás a qualquer hora e dia!" },
+    { id: 9, name: "Elizete Vitta", initials: "EV", text: "Ótima em tudo, valor, precisão total na entrega, muito bom atendimento tanto na recepção como no pessoal nota 10" },
+    { id: 10, name: "Antonio Rabac", initials: "AR", text: "Precisei de um gás após o horário comercial e vocês me atenderam muito rápido obrigado, recomendo, atendimento nota 10" },
+    { id: 11, name: "Mélzinha Costa", initials: "MC", text: "Ótimo atendimento, Gás de qualidade, atendimento sempre na hora, e ótimas pessoas... 😉" }
+];
+
+class TestimonialsCarousel {
+    constructor() {
+        this.wrapper = document.querySelector('.testimonials-wrapper');
+        // Seleciona os botões pelas classes do seu style.css
+        const buttons = document.querySelectorAll('.carousel-btn');
+        this.prevBtn = buttons[0];
+        this.nextBtn = buttons[1];
+        
+        this.cardElements = [];
+        this.cardSize = 365;
+        
+        this.init();
+    }
+
+    init() {
+        if (!this.wrapper) return;
+        
+        this.updateCardSize();
+        this.createInitialCards(); // Cria apenas uma vez
+        this.updateCardsLayout();  // Posiciona
+        this.attachEvents();
+        
+        window.addEventListener('resize', () => {
+            this.updateCardSize();
+            this.updateCardsLayout();
         });
-    });
+    }
 
-    // 2. Header Background and Shadow on Scroll
-    // Adiciona um fundo mais sólido ao header após uma certa rolagem para melhorar a legibilidade.
-    const header = document.querySelector('header');
-    
-    const updateHeaderStyle = () => {
-        if (window.scrollY > 100) {
-            // Fundo semi-transparente para o efeito 'glass' no scroll
-            header.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-            header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.4)';
+    updateCardSize() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            this.cardSize = 260;
+        } else if (window.matchMedia('(max-width: 768px)').matches) {
+            this.cardSize = 290;
         } else {
-            // Fundo mais transparente no topo da página
-            header.style.backgroundColor = '#000000'; 
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            this.cardSize = 365;
         }
-    };
+    }
 
-    window.addEventListener('scroll', updateHeaderStyle);
-    updateHeaderStyle(); // Executa uma vez ao carregar a página
+    createInitialCards() {
+        this.wrapper.innerHTML = ''; 
+        // Criamos os elementos físicos no DOM
+        this.cardElements = testimonials.map((t) => {
+            const card = document.createElement('div');
+            card.className = 'testimonial-card';
+            card.innerHTML = `
+                <div class="testimonial-avatar">${t.initials}</div>
+                <h3 class="testimonial-text">"${t.text}"</h3>
+                <p class="testimonial-author">- ${t.name}</p>
+            `;
+            this.wrapper.appendChild(card);
+            return card;
+        });
+    }
 
-    // 3. Animate Elements on Scroll (Intersection Observer)
-    // Faz os cards (Service Card e Contact Item) aparecerem suavemente ao entrar na tela.
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                // Para de observar depois que o elemento é animado para economizar recursos
-                observer.unobserve(entry.target);
+    updateCardsLayout() {
+        this.cardElements.forEach((card, index) => {
+            // Lógica matemática do React para definir quem é o centro
+            const position = this.cardElements.length % 2
+                ? index - (this.cardElements.length + 1) / 2
+                : index - this.cardElements.length / 2;
+            
+            const isCenter = position === 0;
+
+            // Atualiza as classes do seu CSS
+            if (isCenter) {
+                card.classList.add('center');
+            } else {
+                card.classList.remove('center');
             }
+            
+            // Aplica os estilos de movimento que o CSS irá animar
+            card.style.width = `${this.cardSize}px`;
+            card.style.height = `${this.cardSize}px`;
+
+            const translateX = (this.cardSize / 1.5) * position;
+            const translateY = isCenter ? -65 : position % 2 ? 15 : -15;
+            const rotate = isCenter ? 0 : position % 2 ? 2.5 : -2.5;
+
+            // Aqui acontece a mágica do deslizamento:
+            card.style.transform = `
+                translate(-50%, -50%) 
+                translateX(${translateX}px)
+                translateY(${translateY}px)
+                rotate(${rotate}deg)
+            `;
+
+            // Controle de profundidade e visibilidade
+            card.style.zIndex = isCenter ? "10" : "0";
+            // Esconde cards que estão muito longe nas laterais para não quebrar o layout
+            card.style.opacity = Math.abs(position) > 2 ? "0" : "1"; 
+            card.style.pointerEvents = Math.abs(position) > 1 ? "none" : "auto";
+
+            // Permite clicar no card lateral para trazê-lo ao centro
+            card.onclick = () => this.handleMove(position);
         });
-    }, {
-        // Inicia a animação quando o elemento estiver 10% visível
-        threshold: 0.1
-    });
+    }
 
-    document.querySelectorAll('.service-card, .contact-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease';
-        observer.observe(el);
-    });
+    handleMove(steps) {
+        if (steps === 0) return;
 
-    // 4. Click Tracking for CTA Buttons (Opcional - para Analytics)
-    // Registra um evento no console sempre que um botão de ação for clicado.
-    document.querySelectorAll('.cta-button').forEach(button => {
-        button.addEventListener('click', function() {
-            // Isso seria substituído por um evento de Google Analytics (dataLayer.push)
-            console.log('Botão de Chamada para Ação Clicado:', this.textContent.trim());
-        });
-    });
+        // Reorganiza o array de elementos sem apagar nada do HTML
+        if (steps > 0) {
+            for (let i = 0; i < steps; i++) {
+                this.cardElements.push(this.cardElements.shift());
+            }
+        } else {
+            for (let i = 0; i > steps; i--) {
+                this.cardElements.unshift(this.cardElements.pop());
+            }
+        }
+        
+        this.updateCardsLayout();
+    }
 
-    /*
-    * OBSERVAÇÃO: Implementação do Menu Mobile (Hambúrguer)
-    *
-    * Se você adicionar um botão de menu (hambúrguer) no seu HTML,
-    * você pode descomentar o bloco abaixo para criar a funcionalidade mobile.
-    */
-    /*
-    // const navToggle = document.getElementById('nav-toggle'); 
-    // const navLinks = document.querySelector('.nav-links');
-
-    // if (navToggle) {
-    //     navToggle.addEventListener('click', () => {
-    //         navLinks.classList.toggle('active');
-    //     });
-    // }
-    */
-    // Adicionar: Rastreamento de eventos no GA
-    document.querySelectorAll('.cta-button').forEach(button => {
-        button.addEventListener('click', function() {
-            dataLayer.push({
-                event: 'botao_clicado',
-                tipo: this.textContent.trim()
+    attachEvents() {
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleMove(-1);
             });
-        });
-    });
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleMove(1);
+            });
+        }
+    }
+}
 
+// Inicia o carrossel e as funções de scroll do site
+document.addEventListener('DOMContentLoaded', () => {
+    new TestimonialsCarousel();
+
+    // Header fixo ao rolar
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
