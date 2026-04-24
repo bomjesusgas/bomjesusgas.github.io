@@ -197,6 +197,7 @@ nav {
     opacity: 0.95;
     line-height: 1.8;
     animation: fadeInUp 0.8s ease 0.2s both;
+    overflow-wrap: anywhere;
 }
 
 .hero-copy h2,
@@ -264,6 +265,7 @@ nav {
 .payment-info p {
     margin: 0.5rem 0;
     font-size: 0.95rem;
+    overflow-wrap: anywhere;
 }
 
 .payment-info strong {
@@ -456,6 +458,7 @@ will-change: transform; /* Avisa o navegador para otimizar a animação */
 .about p {
     font-size: 1.1rem;
     line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
 .about strong {
@@ -488,6 +491,7 @@ footer a {
     text-decoration: none;
     font-weight: 600;
     transition: color var(--transition);
+    overflow-wrap: anywhere;
 }
 
 footer a:hover {
@@ -587,6 +591,10 @@ footer a:hover {
         font-size: 0.9rem;
     }
 
+    .payment-info span {
+        display: block;
+    }
+
     .testimonials {
         padding: 60px 0;
     }
@@ -658,6 +666,16 @@ footer a:hover {
 
     .hero h1 {
         font-size: 1.5rem;
+        word-break: break-word;
+    }
+
+    .hero-copy h2,
+    .hero-copy h3 {
+        line-height: 1.5;
+    }
+
+    .payment-info {
+        padding: 1rem;
     }
 
     .testimonial-card {
